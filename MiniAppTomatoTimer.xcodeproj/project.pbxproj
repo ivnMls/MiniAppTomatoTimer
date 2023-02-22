@@ -10,9 +10,9 @@
 		CE389A1A29A00AED008011BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE389A1929A00AED008011BE /* AppDelegate.swift */; };
 		CE389A1C29A00AED008011BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE389A1B29A00AED008011BE /* SceneDelegate.swift */; };
 		CE389A1E29A00AED008011BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE389A1D29A00AED008011BE /* ViewController.swift */; };
-		CE389A2129A00AED008011BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE389A1F29A00AED008011BE /* Main.storyboard */; };
 		CE389A2329A00AF2008011BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE389A2229A00AF2008011BE /* Assets.xcassets */; };
 		CE389A2629A00AF2008011BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE389A2429A00AF2008011BE /* LaunchScreen.storyboard */; };
+		CE389A3429A00B9B008011BE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE389A3329A00B9B008011BE /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,6 @@
 		CE389A1929A00AED008011BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE389A1B29A00AED008011BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE389A1D29A00AED008011BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE389A2029A00AED008011BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE389A2229A00AF2008011BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE389A2529A00AF2008011BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE389A2729A00AF2008011BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE389A3429A00B9B008011BE /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +56,54 @@
 		CE389A1829A00AED008011BE /* MiniAppTomatoTimer */ = {
 			isa = PBXGroup;
 			children = (
+				CE389A2D29A00B02008011BE /* Resources */,
+				CE389A2E29A00B0C008011BE /* Sources */,
+			);
+			path = MiniAppTomatoTimer;
+			sourceTree = "<group>";
+		};
+		CE389A2D29A00B02008011BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE389A2229A00AF2008011BE /* Assets.xcassets */,
+				CE389A2F29A00B25008011BE /* Configuration */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE389A2E29A00B0C008011BE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CE389A3129A00B43008011BE /* Storyboards */,
+				CE389A3029A00B3D008011BE /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CE389A2F29A00B25008011BE /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CE389A2729A00AF2008011BE /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		CE389A3029A00B3D008011BE /* App */ = {
+			isa = PBXGroup;
+			children = (
 				CE389A1929A00AED008011BE /* AppDelegate.swift */,
 				CE389A1B29A00AED008011BE /* SceneDelegate.swift */,
 				CE389A1D29A00AED008011BE /* ViewController.swift */,
-				CE389A1F29A00AED008011BE /* Main.storyboard */,
-				CE389A2229A00AF2008011BE /* Assets.xcassets */,
-				CE389A2429A00AF2008011BE /* LaunchScreen.storyboard */,
-				CE389A2729A00AF2008011BE /* Info.plist */,
 			);
-			path = MiniAppTomatoTimer;
+			path = App;
+			sourceTree = "<group>";
+		};
+		CE389A3129A00B43008011BE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CE389A2429A00AF2008011BE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +122,9 @@
 			dependencies = (
 			);
 			name = MiniAppTomatoTimer;
+			packageProductDependencies = (
+				CE389A3329A00B9B008011BE /* SnapKit */,
+			);
 			productName = MiniAppTomatoTimer;
 			productReference = CE389A1629A00AED008011BE /* MiniAppTomatoTimer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +153,9 @@
 				Base,
 			);
 			mainGroup = CE389A0D29A00AED008011BE;
+			packageReferences = (
+				CE389A3229A00B9B008011BE /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = CE389A1729A00AED008011BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +172,6 @@
 			files = (
 				CE389A2629A00AF2008011BE /* LaunchScreen.storyboard in Resources */,
 				CE389A2329A00AF2008011BE /* Assets.xcassets in Resources */,
-				CE389A2129A00AED008011BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE389A1F29A00AED008011BE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE389A2029A00AED008011BE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE389A2429A00AF2008011BE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +330,6 @@
 				INFOPLIST_FILE = MiniAppTomatoTimer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +357,6 @@
 				INFOPLIST_FILE = MiniAppTomatoTimer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE389A3229A00B9B008011BE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE389A3329A00B9B008011BE /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE389A3229A00B9B008011BE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE389A0E29A00AED008011BE /* Project object */;
 }
